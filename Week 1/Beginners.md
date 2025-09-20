@@ -1,4 +1,4 @@
-🌟 Welcome to the World of HTML5! 🌟
+# 🌟 Welcome to the World of HTML5! 🌟
 **Your Complete Guide to Web Development Fundamentals** 📚
 
 Welcome, future web developer! 👋 You're about to embark on an exciting journey into the world of HTML5 - the backbone of every website on the internet! This comprehensive guide will transform you from a complete beginner to someone who can confidently build beautiful, functional web pages.
@@ -12,7 +12,7 @@ Welcome, future web developer! 👋 You're about to embark on an exciting journe
 
  
 
- 📋 What You'll Learn (Table of Contents)
+## 📋 What You'll Learn (Table of Contents)
 
 1. **🎯 Learning Objectives** - Your roadmap to success
 2. **🧱 HTML5 Basics** - The fundamental building blocks  
@@ -42,7 +42,7 @@ Welcome, future web developer! 👋 You're about to embark on an exciting journe
 
  
 
- 🎯 Objectives
+## 🎯 Objectives
 
 By the end of this tutorial, you’ll be able to:
 
@@ -54,7 +54,7 @@ By the end of this tutorial, you’ll be able to:
 
  
 
- 🧱 Building the Foundation: HTML5 Basics
+## 🧱 Building the Foundation: HTML5 Basics
 
  
 
@@ -62,7 +62,7 @@ HTML5 is like the LEGO bricks of the web. Each tag is a brick, helping you const
 
  
 
- 📐 The Blueprint: Structure of an HTML Document
+## 📐 The Blueprint: Structure of an HTML Document
 
 Here's what every HTML document looks like: 
 
@@ -94,7 +94,7 @@ Here's what every HTML document looks like: 
 
  
 
-🔍 Let’s Break It Down:
+### 🔍 Let's Break It Down:
 
 - `<!DOCTYPE html>`: Tells browsers you’re using HTML5 🚀.
 
@@ -110,7 +110,7 @@ Here's what every HTML document looks like: 
 
  
 
- 🖍️ Adding Components to Your Page: Common Tags
+## 🖍️ Adding Components to Your Page: Common Tags
 
  
 
@@ -118,7 +118,7 @@ Here’s where the fun starts! 🎉 You can use these tags to create content tha
 
  
 
- 🏷️ Headings 
+### 🏷️ Headings
 
 Headings make your content shine like headlines in a newspaper 📰: 
 
@@ -134,7 +134,7 @@ Headings make your content shine like headlines in a newspaper 📰: 
 
  
 
- 📝 Paragraphs 
+### 📝 Paragraphs
 
 Write amazing content with `<p>`: 
 
@@ -148,7 +148,7 @@ Write amazing content with `<p>`: 
 
  
 
- 📜 Lists 
+### 📜 Lists
 
 Organize like a pro with these list types: 
 
@@ -184,7 +184,7 @@ Organize like a pro with these list types: 
 
  
 
- 🔗 Links 
+### 🔗 Links
 
 Connect to the world using the `<a>` tag: 
 
@@ -194,7 +194,7 @@ Connect to the world using the `<a>` tag: 
 
 
 
- 🖼️ Images 
+### 🖼️ Images
 
 Add life to your page with pictures: 
 
@@ -208,13 +208,13 @@ Add life to your page with pictures: 
 
  
 
- 📋 Forms: Getting User Input
+## 📋 Forms: Getting User Input
 
 Forms are like questionnaires on your webpage! 📝 They let users interact with your site:
 
  
 
- 🎯 Basic Form Structure
+### 🎯 Basic Form Structure
 
 <form action="/submit" method="POST">
     
@@ -224,7 +224,7 @@ Forms are like questionnaires on your webpage! 📝 They let users interact with
 
  
 
- 🔧 Essential Form Elements
+### 🔧 Essential Form Elements
 
 **Text Input** 📝:
 ```html
@@ -288,7 +288,7 @@ Forms are like questionnaires on your webpage! 📝 They let users interact with
 
  
 
- 📊 Tables: Organizing Data
+## 📊 Tables: Organizing Data
 
 Tables are perfect for displaying structured data like schedules or scores! 📈
 
@@ -321,7 +321,7 @@ Tables are perfect for displaying structured data like schedules or scores! 📈
 
  
 
- 🎯 Layout Containers: div and span
+## 🎯 Layout Containers: div and span
 
 **Div** - Block-level container for grouping elements:
 ```html
@@ -419,7 +419,7 @@ Let’s add meaning to our code! ✨ Semantic tags tell browsers what the conten
 
 
 
- 🎨 Let’s Build Something Fun!
+### 🎨 Let's Build Something Fun!
 
  
 
@@ -500,7 +500,7 @@ Combine what you’ve learned to create a web page 🎉: 
  
 
 
- 🛠️ Hands-On Practice: Build Your First Complete Page!
+## 🛠️ Hands-On Practice: Build Your First Complete Page!
 
 Let's create a student profile page that combines everything we've learned! 🚀
 
@@ -649,7 +649,7 @@ Make your page accessible:
 
  
 
- 🐛 Common Mistakes & How to Fix Them
+## 🐛 Common Mistakes & How to Fix Them
 
 **1. Forgetting to close tags** ❌
 ```html
@@ -691,7 +691,7 @@ Make your page accessible:
 
  
 
- 🔧 Essential HTML Attributes Every Beginner Should Know
+## 🔧 Essential HTML Attributes Every Beginner Should Know
 
 **Global Attributes** (work on most elements):
 - `id="unique-name"` - Unique identifier for the element 🏷️
@@ -717,7 +717,7 @@ Make your page accessible:
 
  
 
- 🌐 HTML5 Semantic Elements: Building Meaningful Websites
+## 🌐 HTML5 Semantic Elements: Building Meaningful Websites
 
 HTML5 introduced semantic elements that give meaning to your content:
 
@@ -761,7 +761,7 @@ Example:
 
  
 
- 🎯 What's Next? Your Web Development Journey
+## 🎯 What's Next? Your Web Development Journey
 
 **Immediate Next Steps** 🚀:
 1. **Practice, Practice, Practice!** - Build 3-5 small websites using only HTML
@@ -783,7 +783,7 @@ Example:
 5. Event Information Page 🎉
 
  
- 🎁 Bonus Tips
+## 🎁 Bonus Tips
 
 1. 🕶️ Use semantic tags to make your pages accessible to everyone.
 
@@ -810,7 +810,7 @@ Example:
 
  
 
- 🎉 Congratulations!
+## 🎉 Congratulations!
 
 You’ve taken your first step toward mastering web development! 🚀
 
