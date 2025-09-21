@@ -40,7 +40,6 @@ Welcome, future web developer! 👋 You're about to embark on an exciting journe
 ---
 
 
- 
 
 ## 🎯 Objectives
 
@@ -91,8 +90,11 @@ Here's what every HTML document looks like: 
 </html>
 
 
+## Youtube Tutorial for Environment setup and Quick Guide
 
+<a href="https://youtu.be/2u4q2vDLiU0" target="_blank">Click here to Watch</a>
  
+
 
 ### 🔍 Let's Break It Down:
 
