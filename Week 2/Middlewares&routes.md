@@ -260,3 +260,71 @@ Hints:
 
 Happy learning! ✨  
 This README expands the starter project with focused middleware + routes lessons. For deep practice, see the companion lesson file below.
+
+
+
+# 📚 Week 2: Additional Resources for Express.js
+
+Welcome to Week 2! Here are carefully curated resources for deepening your Express.js knowledge, including official documentation, security essentials, testing, deployment, and must-use libraries.[^1]
+
+***
+
+## 🌟 Official Documentation \& Guides
+
+- [Express.js Official Documentation](https://expressjs.com/) – The definitive resource to understand Express.js, straight from the creators.[^1]
+- [Node.js Official Documentation](https://nodejs.org/en/docs/) – Comprehensive docs of Node.js, its modules, and best practices.[^1]
+- [NVM (Node Version Manager)](https://github.com/nvm-sh/nvm) – A handy tool to install and manage multiple Node.js versions on your system.[^1]
+- [MDN Web Docs – HTTP Request Methods](https://developer.mozilla.org/en-US/docs/Web/HTTP/Methods) – Deep dive into crucial HTTP methods used in building REST APIs.[^1]
+
+***
+
+## 🔧 Middleware \& Security
+
+- [Middleware in Express.js](https://expressjs.com/en/guide/using-middleware.html) – Learn how to harness middleware in Express for powerful request handling.[^1]
+- [CORS in Express.js](https://expressjs.com/en/resources/middleware/cors.html) – Official guide to enabling Cross-Origin Resource Sharing in Express.[^1]
+- [Helmet.js – Security Middleware](https://helmetjs.github.io/) – Secure your Express apps by setting various HTTP headers.[^1]
+- [OWASP Node.js Security Cheat Sheet](https://cheatsheetseries.owasp.org/cheatsheets/Nodejs_Security_Cheat_Sheet.html) – Community-driven best practices for Node.js security.[^1]
+
+***
+
+## 🔄 REST API Design \& Best Practices
+
+- [REST API Best Practices](https://restfulapi.net/) – Comprehensive guide for structuring high-quality APIs.[^1]
+- [API Versioning in Express.js](https://cloud.google.com/blog/topics/developers-practitioners/api-design-everything-you-need-know-about-versioning-rest-apis) – Learn why and how to version your APIs for maintainability.[^1]
+- [Pagination in REST APIs](https://jsonapi.org/format/#fetching-pagination) – Best practices for handling large datasets efficiently.[^1]
+
+***
+
+## 🧪 Testing \& Debugging
+
+- [Jest for Node.js Testing](https://jestjs.io/docs/getting-started) – A beginner-friendly guide to automated testing in Node.js.[^1]
+- [Supertest for API Testing](https://github.com/visionmedia/supertest) – A powerful tool for testing HTTP endpoints in Express.[^1]
+- [Postman API Testing](https://learning.postman.com/docs/getting-started/introduction/) – Learn to manually test your APIs using Postman.[^1]
+- [Debugging in Node.js](https://nodejs.org/en/docs/guides/debugging-getting-started/) – Official guide to debugging Node.js apps efficiently.[^1]
+
+***
+
+## 🔥 Deployment \& DevOps
+
+- [Deploy Express.js on Render](https://render.com/docs/deploy-node-express-app) – Step-by-step guide to deploying Express apps on Render.[^1]
+- [Using PM2 for Process Management](https://pm2.keymetrics.io/) – Keep your Express server stable and running in production environments.[^1]
+- [Logging in Express.js with Winston](https://github.com/winstonjs/winston) – Learn robust logging strategies for Express apps.[^1]
+- [GitHub Actions for CI/CD](https://docs.github.com/en/actions/learn-github-actions) – Automate deployment and development workflows with GitHub Actions.[^1]
+
+***
+
+## 🛠️ Additional Tools \& Libraries
+
+- [Swagger for API Documentation](https://swagger.io/docs/) – Automatically generate interactive API docs.[^1]
+- [Morgan – Request Logging Middleware](https://expressjs.com/en/resources/middleware/morgan.html) – Elegant HTTP request logging for Express apps.[^1]
+- [Socket.io – Real-Time Communication](https://socket.io/) – Add real-time event-based communication to your Express apps.[^1]
+- [GraphQL with Express.js](https://graphql.org/graphql-js/express-graphql/) – Build powerful GraphQL APIs using Express.js.[^1]
+
+***
+
+Feel free to explore each link and deepen your week’s learning experience!
+
+<div style="text-align: center">⁂</div>
+
+[^1]: https://expressjs.com
+
