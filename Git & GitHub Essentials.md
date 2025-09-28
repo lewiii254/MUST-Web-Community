@@ -24,8 +24,40 @@ Think of Git as a **time machine for your code** ⏳💻.
 git --version
 ```
 
-###🔹 2. Configure Git (only once) ⚙️
+### 🔹 2. Configure Git (only once) ⚙️
 ```
 git config --global user.name "Your Name"
 git config --global user.email "youremail@example.com"
+```
+
+## 🛠️ Basic Git Workflow 🔄
+### 1️⃣ Initialize Git in a Project
+```
+git init
+```
+👉 Creates a hidden .git folder in your project.
+### 2️⃣ Check Status
+```
+git status
+```
+👉 Shows tracked/untracked files.
+
+### 3️⃣ Add Files
+```
+git add filename.txt
+# OR add everything
+git add .
+```
+### 4️⃣ Commit Changes
+```
+git commit -m "Your commit message"
+```
+👉 Saves a snapshot of your code.
+### 5️⃣ Connect to GitHub 🌐
+```
+git remote add origin https://github.com/username/repo-name.git
+```
+### 6️⃣ Push to GitHub 🚀
+```
+git push -u origin main
 ```
