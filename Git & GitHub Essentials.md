@@ -91,3 +91,39 @@ git checkout branch-name
 | `git pull`                   | Get latest from GitHub |
 | `git branch`                 | List branches          |
 | `git checkout -b new-branch` | Create + switch branch |
+
+
+### 🧑‍🤝‍🧑 Team Collaboration Tips 💡
+- 🔄 Always pull before pushing
+
+- 📝 Write clear commit messages
+
+- 🌿 Use branches for new features
+
+- ✅ Resolve merge conflicts carefully
+
+## 🐙 GitHub Basics 🎉
+GitHub = Git’s best friend 💙. It’s where developers host, share, and collaborate on projects.
+
+### 🔹 1. Fork 🍴
+Makes a personal copy of someone else’s repo into your account.
+
+Useful for contributing to open-source projects.
+
+### 🔹 2. Star ⭐
+Save repos you like or find useful.
+
+Acts like a bookmark ❤️.
+
+### 🔹 3. Issues 🐞
+Used to report bugs, suggest features, or track tasks in a repo.
+
+Great for collaboration & discussions.
+
+### 🔹 4. Pull Requests (PRs) 🔀
+When you make changes in your fork/branch and want them added to the main repo.
+
+Used for contributing to other people’s projects.
+
+### 🔹 5. GitHub Actions ⚡ (Optional for later)
+Automate workflows like testing, deployment, CI/CD 🚀.
