@@ -22,4 +22,10 @@ Think of Git as a **time machine for your code** ⏳💻.
 - ✅ Check if installed:  
 ```bash
 git --version
+```
 
+###🔹 2. Configure Git (only once) ⚙️
+```
+git config --global user.name "Your Name"
+git config --global user.email "youremail@example.com"
+```
