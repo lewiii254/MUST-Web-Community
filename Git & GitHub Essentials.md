@@ -61,3 +61,21 @@ git remote add origin https://github.com/username/repo-name.git
 ```
 git push -u origin main
 ```
+
+## 🔄 Working with Changes ⚡
+### 📥 Pull latest changes
+```
+git pull origin main
+```
+### 📝 View commit history
+```
+git log
+```
+### 🌿 Create new branch
+```
+git branch feature-branch
+```
+### 🔀 Switch branches
+```
+git checkout branch-name
+```
