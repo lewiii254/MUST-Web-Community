@@ -79,3 +79,15 @@ git branch feature-branch
 ```
 git checkout branch-name
 ```
+## 🌟 Common Commands Cheatsheet 📖(Mostly Used Commands)💯🔗💻
+| Command                      | Description            |
+| ---------------------------- | ---------------------- |
+| `git init`                   | Start a repo           |
+| `git clone <url>`            | Copy repo from GitHub  |
+| `git status`                 | Check changes          |
+| `git add .`                  | Stage changes          |
+| `git commit -m ""`           | Save snapshot          |
+| `git push`                   | Upload to GitHub       |
+| `git pull`                   | Get latest from GitHub |
+| `git branch`                 | List branches          |
+| `git checkout -b new-branch` | Create + switch branch |
