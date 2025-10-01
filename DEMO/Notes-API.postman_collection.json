@@ -1,0 +1,177 @@
+{
+  "info": {
+    "name": "Notes API - MERN Demo",
+    "description": "Collection for testing the Notes API CRUD operations",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Get All Notes",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/notes",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "notes"]
+        },
+        "description": "Retrieves all notes from the database"
+      }
+    },
+    {
+      "name": "Get Single Note",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/notes/:id",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "notes", ":id"],
+          "variable": [
+            {
+              "key": "id",
+              "value": "REPLACE_WITH_ACTUAL_NOTE_ID",
+              "description": "The ID of the note to retrieve"
+            }
+          ]
+        },
+        "description": "Retrieves a single note by its ID"
+      }
+    },
+    {
+      "name": "Create Note",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"title\": \"My First Note\",\n  \"content\": \"This is the content of my first note. I'm learning CRUD operations!\",\n  \"category\": \"Personal\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/notes",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "notes"]
+        },
+        "description": "Creates a new note"
+      }
+    },
+    {
+      "name": "Create Note - Work Category",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"title\": \"Meeting Notes\",\n  \"content\": \"Discussed project timeline and deliverables for Q1 2024\",\n  \"category\": \"Work\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/notes",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "notes"]
+        },
+        "description": "Creates a new note with Work category"
+      }
+    },
+    {
+      "name": "Update Note",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"title\": \"Updated Note Title\",\n  \"content\": \"This is the updated content of my note\",\n  \"category\": \"Personal\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:5000/api/notes/:id",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "notes", ":id"],
+          "variable": [
+            {
+              "key": "id",
+              "value": "REPLACE_WITH_ACTUAL_NOTE_ID",
+              "description": "The ID of the note to update"
+            }
+          ]
+        },
+        "description": "Updates an existing note"
+      }
+    },
+    {
+      "name": "Delete Note",
+      "request": {
+        "method": "DELETE",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/api/notes/:id",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["api", "notes", ":id"],
+          "variable": [
+            {
+              "key": "id",
+              "value": "REPLACE_WITH_ACTUAL_NOTE_ID",
+              "description": "The ID of the note to delete"
+            }
+          ]
+        },
+        "description": "Deletes a note by its ID"
+      }
+    },
+    {
+      "name": "API Root",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": [""]
+        },
+        "description": "Get API welcome message and available endpoints"
+      }
+    },
+    {
+      "name": "Health Check",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5000/health",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "5000",
+          "path": ["health"]
+        },
+        "description": "Check if the server is running properly"
+      }
+    }
+  ]
+}
