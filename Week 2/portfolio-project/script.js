@@ -1,30 +1,51 @@
-// Mobile Navigation Toggle
+// Mobile Navigation Toggle (accessible)
 const mobileMenu = document.getElementById('mobile-menu');
 const navMenu = document.querySelector('.nav-menu');
 
-mobileMenu.addEventListener('click', () => {
-    mobileMenu.classList.toggle('active');
-    navMenu.classList.toggle('active');
+function setMobileMenu(open) {
+    if (!mobileMenu) return;
+    mobileMenu.classList.toggle('active', open);
+    navMenu.classList.toggle('active', open);
+    mobileMenu.setAttribute('aria-expanded', open ? 'true' : 'false');
+}
+
+if (mobileMenu) {
+    mobileMenu.addEventListener('click', () => {
+        const isOpen = mobileMenu.classList.contains('active');
+        setMobileMenu(!isOpen);
+    });
+}
+
+// Close mobile menu with Escape and trap focus when open
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+        setMobileMenu(false);
+        // close modal if open
+        const modal = document.getElementById('project-modal');
+        if (modal && modal.getAttribute('aria-hidden') === 'false') closeProjectModal();
+    }
 });
 
 // Close mobile menu when clicking on a link
 document.querySelectorAll('.nav-link').forEach(link => {
     link.addEventListener('click', () => {
-        mobileMenu.classList.remove('active');
-        navMenu.classList.remove('active');
+        setMobileMenu(false);
     });
 });
 
 // Smooth scrolling for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
+        const href = this.getAttribute('href');
+        if (!href || href === '#') return;
+        const target = document.querySelector(href);
         if (target) {
-            target.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
-            });
+            e.preventDefault();
+            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            // move focus for accessibility
+            target.setAttribute('tabindex', '-1');
+            target.focus({ preventScroll: true });
+            target.removeAttribute('tabindex');
         }
     });
 });
@@ -33,37 +54,66 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 const sections = document.querySelectorAll('section');
 const navLinks = document.querySelectorAll('.nav-link');
 
+// Throttled scroll handling for active link highlighting
+let scrollTimeout = null;
 window.addEventListener('scroll', () => {
-    let current = '';
-    const scrollPosition = window.pageYOffset;
+    if (scrollTimeout) return;
+    scrollTimeout = setTimeout(() => {
+        let current = '';
+        const scrollPosition = window.pageYOffset;
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop - 120;
+            const sectionHeight = section.offsetHeight;
+            if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                current = section.getAttribute('id');
+            }
+        });
 
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop - 100;
-        const sectionHeight = section.offsetHeight;
-        
-        if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
-            current = section.getAttribute('id');
-        }
-    });
+            // When nav opens, focus first link for keyboard users
+            const firstNavLink = document.querySelector('.nav-menu .nav-link');
+            if (mobileMenu) {
+                mobileMenu.addEventListener('click', () => {
+                    const open = mobileMenu.classList.contains('active');
+                    if (open && firstNavLink) firstNavLink.focus();
+                });
+            }
 
-    navLinks.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href') === `#${current}`) {
-            link.classList.add('active');
-        }
-    });
+        navLinks.forEach(link => {
+            link.classList.remove('active');
+            if (link.getAttribute('href') === `#${current}`) {
+                link.classList.add('active');
+            }
+        });
+
+        scrollTimeout = null;
+    }, 100);
 });
 
 // Navbar background on scroll
+// Navbar background on scroll and show back-to-top button
+const navbar = document.querySelector('.navbar');
+const backToTop = document.createElement('button');
+backToTop.className = 'back-to-top';
+backToTop.setAttribute('aria-label', 'Back to top');
+backToTop.innerHTML = '↑';
+document.body.appendChild(backToTop);
+
 window.addEventListener('scroll', () => {
-    const navbar = document.querySelector('.navbar');
+    if (!navbar) return;
     if (window.scrollY > 50) {
         navbar.style.background = 'rgba(255, 255, 255, 0.98)';
         navbar.style.boxShadow = '0 2px 20px rgba(0,0,0,0.1)';
+        backToTop.style.display = 'flex';
     } else {
         navbar.style.background = 'rgba(255, 255, 255, 0.95)';
         navbar.style.boxShadow = 'none';
+        backToTop.style.display = 'none';
     }
+});
+
+backToTop.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    document.querySelector('#home')?.focus();
 });
 
 // Intersection Observer for animations
@@ -94,34 +144,105 @@ const skillObserver = new IntersectionObserver((entries) => {
         if (entry.isIntersecting) {
             skillBars.forEach(bar => {
                 const width = bar.getAttribute('data-width');
-                bar.style.width = width;
+                // animate only if not already set
+                if (!bar.style.width) bar.style.width = width;
             });
         }
     });
-}, { threshold: 0.5 });
+}, { threshold: 0.4 });
 
 if (skillsSection) {
     skillObserver.observe(skillsSection);
 }
 
-// Contact form handling
+// Project filtering
+const filterButtons = document.querySelectorAll('.filter-btn');
+const projectCards = document.querySelectorAll('.project-card');
+filterButtons.forEach(btn => {
+    btn.addEventListener('click', () => {
+        filterButtons.forEach(b => { b.classList.remove('active'); b.setAttribute('aria-selected', 'false'); });
+        btn.classList.add('active'); btn.setAttribute('aria-selected', 'true');
+        const filter = btn.getAttribute('data-filter');
+        projectCards.forEach(card => {
+            const cat = card.getAttribute('data-category') || 'all';
+            if (filter === 'all' || cat === filter) card.style.display = '';
+            else card.style.display = 'none';
+        });
+    });
+});
+
+// Project modal (open/close)
+const projectModal = document.getElementById('project-modal');
+const modalBody = projectModal ? projectModal.querySelector('.modal-body') : null;
+const modalCloseBtn = projectModal ? projectModal.querySelector('.modal-close') : null;
+
+function openProjectModal(contentHtml) {
+    if (!projectModal || !modalBody) return;
+    modalBody.innerHTML = contentHtml;
+    projectModal.setAttribute('aria-hidden', 'false');
+    // trap focus
+    const focusable = projectModal.querySelectorAll('a, button, input, textarea, [tabindex]');
+    if (focusable.length) focusable[0].focus();
+}
+
+function closeProjectModal() {
+    if (!projectModal) return;
+    projectModal.setAttribute('aria-hidden', 'true');
+    modalBody && (modalBody.innerHTML = '');
+}
+
+// Open modal when clicking project link or project card
+document.querySelectorAll('.project-card').forEach(card => {
+    card.addEventListener('click', (e) => {
+        // ignore if clicking actual external link
+        if (e.target.closest('a')) return;
+        const title = card.querySelector('.project-content h3')?.textContent || 'Project';
+        const desc = card.querySelector('.project-content p')?.innerHTML || '';
+        const tech = card.querySelector('.project-tech')?.innerHTML || '';
+        const html = `<h2>${title}</h2><div>${desc}</div><div class="project-tech">${tech}</div>`;
+        openProjectModal(html);
+    });
+});
+
+if (modalCloseBtn) modalCloseBtn.addEventListener('click', closeProjectModal);
+if (projectModal) projectModal.addEventListener('click', (e) => { if (e.target === projectModal) closeProjectModal(); });
+
+// Contact form handling with validation and toast
 const contactForm = document.querySelector('.contact-form');
+const createToast = (msg, type = 'info') => {
+    const t = document.createElement('div');
+    t.className = `toast toast-${type}`;
+    t.textContent = msg;
+    t.setAttribute('role', 'status');
+    document.body.appendChild(t);
+    setTimeout(() => { t.style.opacity = '0'; }, 3000);
+    setTimeout(() => { t.remove(); }, 3600);
+};
+
 if (contactForm) {
     contactForm.addEventListener('submit', function(e) {
         e.preventDefault();
-        
-        // Show success message
-        alert('Thank you for your message! I\'ll get back to you soon. 🚀');
-        
-        // Reset form
+        const formData = new FormData(this);
+        const name = formData.get('name') || '';
+        const email = formData.get('email') || '';
+        const message = formData.get('message') || '';
+
+        if (!name.trim() || !email.trim() || !message.trim()) {
+            createToast('Please fill in all required fields.', 'error');
+            return;
+        }
+
+        // Here you would normally send the data to a server.
+        createToast('Thank you for your message! I\'ll get back to you soon. 🚀', 'success');
         this.reset();
     });
 }
 
-// Dark mode toggle
+// Dark mode toggle with persistence
 const createDarkModeToggle = () => {
     const toggle = document.createElement('button');
     toggle.classList.add('dark-mode-toggle');
+    toggle.setAttribute('aria-label', 'Toggle dark mode');
     toggle.innerHTML = '🌙';
     toggle.style.cssText = `
         position: fixed;
@@ -139,45 +260,48 @@ const createDarkModeToggle = () => {
         box-shadow: var(--shadow);
         transition: var(--transition);
     `;
-    
     document.body.appendChild(toggle);
-    
+
+    const setMode = (isDark) => {
+        document.body.classList.toggle('dark-mode', isDark);
+        toggle.innerHTML = isDark ? '☀️' : '🌙';
+        try { localStorage.setItem('dark-mode', isDark ? '1' : '0'); } catch (e) {}
+    };
+
+    // Initialize from preference or localStorage
+    const saved = (() => { try { return localStorage.getItem('dark-mode'); } catch (e) { return null; }})();
+    if (saved !== null) setMode(saved === '1');
+    else setMode(window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches);
+
     toggle.addEventListener('click', () => {
-        document.body.classList.toggle('dark-mode');
-        toggle.innerHTML = document.body.classList.contains('dark-mode') ? '☀️' : '🌙';
+        const isDark = document.body.classList.contains('dark-mode');
+        setMode(!isDark);
     });
 
-    toggle.addEventListener('mouseenter', () => {
-        toggle.style.transform = 'scale(1.1)';
-    });
-
-    toggle.addEventListener('mouseleave', () => {
-        toggle.style.transform = 'scale(1)';
-    });
+    toggle.addEventListener('mouseenter', () => { toggle.style.transform = 'scale(1.05)'; });
+    toggle.addEventListener('mouseleave', () => { toggle.style.transform = 'scale(1)'; });
 };
 
 // Initialize dark mode toggle
 createDarkModeToggle();
 
-// Typing animation for hero title (optional)
+// Typing animation for hero title (respects reduced-motion)
 const heroTitle = document.querySelector('.hero-title');
 if (heroTitle) {
-    const text = heroTitle.innerHTML;
-    heroTitle.innerHTML = '';
-    
-    let i = 0;
-    const typeWriter = () => {
-        if (i < text.length) {
-            heroTitle.innerHTML += text.charAt(i);
-            i++;
-            setTimeout(typeWriter, 100);
-        }
-    };
-    
-    // Start typing animation after page load
-    window.addEventListener('load', () => {
-        setTimeout(typeWriter, 1000);
-    });
+    const prefersReduced = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    if (!prefersReduced) {
+        const text = heroTitle.textContent.trim();
+        heroTitle.textContent = '';
+        let i = 0;
+        const typeWriter = () => {
+            if (i < text.length) {
+                heroTitle.textContent += text.charAt(i);
+                i++;
+                setTimeout(typeWriter, 60);
+            }
+        };
+        window.addEventListener('load', () => { setTimeout(typeWriter, 600); });
+    }
 }
 
 // Parallax effect for hero section (subtle)
