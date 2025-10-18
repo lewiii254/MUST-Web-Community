@@ -3,17 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Web Developer Portfolio 🚀</title>
+    <meta name="description" content="Portfolio of Marklewis Mutugi — Full-Stack Web Developer. Projects, skills, and contact info.">
+    <title>Marklewis Mutugi - Web Developer Portfolio 🚀</title>
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="icon" href="/favicon.ico">
+    <meta name="theme-color" content="#667eea">
+    <meta property="og:title" content="Marklewis Mutugi — Web Developer Portfolio">
+    <meta property="og:description" content="Full-Stack Web Developer. Explore projects, skills, and contact information.">
+    <meta property="og:image" content="/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 </head>
 <body>
+    <a class="skip-link" href="#main">Skip to content</a>
     <!-- Navigation -->
-    <nav class="navbar">
+    <header>
+    <nav class="navbar" role="navigation" aria-label="Main navigation">
         <div class="nav-container">
             <a href="#home" class="nav-logo">Your Name 💻</a>
-            <ul class="nav-menu">
+            <ul class="nav-menu" id="primary-navigation">
                 <li class="nav-item">
                     <a href="#home" class="nav-link">Home 🏠</a>
                 </li>
@@ -30,20 +40,22 @@
                     <a href="#contact" class="nav-link">Contact 📞</a>
                 </li>
             </ul>
-            <div class="nav-toggle" id="mobile-menu">
+            <button class="nav-toggle" id="mobile-menu" aria-controls="primary-navigation" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="bar"></span>
                 <span class="bar"></span>
                 <span class="bar"></span>
-            </div>
+            </button>
         </div>
     </nav>
+    </header>
 
     <!-- Hero Section -->
+    <main id="main">
     <section id="home" class="hero">
         <div class="hero-container">
             <div class="hero-content">
                 <h1 class="hero-title">
-                    Hi, I'm <span class="gradient-text">Your Name</span> 👋
+                    Hi, I'm <span class="gradient-text">Marklewis Mutugi</span> <span aria-hidden="true">👋</span>
                 </h1>
                 <p class="hero-subtitle">
                     Full-Stack Web Developer & UI/UX Enthusiast 🎨
@@ -149,18 +161,24 @@
     <section id="projects" class="projects">
         <div class="container">
             <h2 class="section-title">My Projects 🚀</h2>
+            <div class="project-filters" role="tablist" aria-label="Project categories">
+                <button class="filter-btn active" data-filter="all" role="tab" aria-selected="true">All</button>
+                <button class="filter-btn" data-filter="web" role="tab" aria-selected="false">Web</button>
+                <button class="filter-btn" data-filter="mobile" role="tab" aria-selected="false">Mobile</button>
+                <button class="filter-btn" data-filter="design" role="tab" aria-selected="false">Design</button>
+            </div>
             <div class="projects-grid">
-                <div class="project-card">
+                <div class="project-card" data-category="web">
                     <div class="project-image">
                         <div class="project-placeholder">
                             <i class="fas fa-laptop-code"></i>
                             <p>Project Screenshot</p>
                         </div>
                         <div class="project-overlay">
-                            <a href="#" class="project-link">
+                            <a href="#" class="project-link" target="_blank" rel="noopener noreferrer">
                                 <i class="fas fa-external-link-alt"></i>
                             </a>
-                            <a href="#" class="project-link">
+                            <a href="#" class="project-link" target="_blank" rel="noopener noreferrer">
                                 <i class="fab fa-github"></i>
                             </a>
                         </div>
@@ -176,17 +194,17 @@
                     </div>
                 </div>
 
-                <div class="project-card">
+                <div class="project-card" data-category="mobile">
                     <div class="project-image">
                         <div class="project-placeholder">
                             <i class="fas fa-mobile-alt"></i>
                             <p>Project Screenshot</p>
                         </div>
                         <div class="project-overlay">
-                            <a href="#" class="project-link">
+                            <a href="#" class="project-link" target="_blank" rel="noopener noreferrer">
                                 <i class="fas fa-external-link-alt"></i>
                             </a>
-                            <a href="#" class="project-link">
+                            <a href="#" class="project-link" target="_blank" rel="noopener noreferrer">
                                 <i class="fab fa-github"></i>
                             </a>
                         </div>
@@ -202,17 +220,17 @@
                     </div>
                 </div>
 
-                <div class="project-card">
+                <div class="project-card" data-category="design">
                     <div class="project-image">
                         <div class="project-placeholder">
                             <i class="fas fa-palette"></i>
                             <p>Project Screenshot</p>
                         </div>
                         <div class="project-overlay">
-                            <a href="#" class="project-link">
+                            <a href="#" class="project-link" target="_blank" rel="noopener noreferrer">
                                 <i class="fas fa-external-link-alt"></i>
                             </a>
-                            <a href="#" class="project-link">
+                            <a href="#" class="project-link" target="_blank" rel="noopener noreferrer">
                                 <i class="fab fa-github"></i>
                             </a>
                         </div>
@@ -230,6 +248,14 @@
             </div>
         </div>
     </section>
+
+    <!-- Project Modal -->
+    <div class="project-modal" id="project-modal" aria-hidden="true" role="dialog" aria-modal="true">
+        <div class="modal-content" role="document">
+            <button class="modal-close" aria-label="Close project">×</button>
+            <div class="modal-body"></div>
+        </div>
+    </div>
 
     <!-- Contact Section -->
     <section id="contact" class="contact">
@@ -257,32 +283,36 @@
                         </div>
                     </div>
                     <div class="social-links">
-                        <a href="#" class="social-link">
+                        <a href="#" class="social-link" target="_blank" rel="noopener noreferrer">
                             <i class="fab fa-linkedin"></i>
                         </a>
-                        <a href="#" class="social-link">
+                        <a href="#" class="social-link" target="_blank" rel="noopener noreferrer">
                             <i class="fab fa-github"></i>
                         </a>
-                        <a href="#" class="social-link">
+                        <a href="#" class="social-link" target="_blank" rel="noopener noreferrer">
                             <i class="fab fa-twitter"></i>
                         </a>
-                        <a href="#" class="social-link">
+                        <a href="#" class="social-link" target="_blank" rel="noopener noreferrer">
                             <i class="fab fa-instagram"></i>
                         </a>
                     </div>
                 </div>
-                <form class="contact-form">
+                <form class="contact-form" aria-label="Contact form">
                     <div class="form-group">
-                        <input type="text" placeholder="Your Name" required>
+                        <label class="visually-hidden" for="contact-name">Your Name</label>
+                        <input id="contact-name" name="name" type="text" placeholder="Your Name" required>
                     </div>
                     <div class="form-group">
-                        <input type="email" placeholder="Your Email" required>
+                        <label class="visually-hidden" for="contact-email">Your Email</label>
+                        <input id="contact-email" name="email" type="email" placeholder="Your Email" required>
                     </div>
                     <div class="form-group">
-                        <input type="text" placeholder="Subject" required>
+                        <label class="visually-hidden" for="contact-subject">Subject</label>
+                        <input id="contact-subject" name="subject" type="text" placeholder="Subject" required>
                     </div>
                     <div class="form-group">
-                        <textarea rows="5" placeholder="Your Message" required></textarea>
+                        <label class="visually-hidden" for="contact-message">Your Message</label>
+                        <textarea id="contact-message" name="message" rows="5" placeholder="Your Message" required></textarea>
                     </div>
                     <button type="submit" class="btn btn-primary">
                         Send Message 🚀
