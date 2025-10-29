@@ -623,6 +623,8 @@ console.log(allSettings);
 
 ### 🔄 Rest Parameters
 
+Rest parameters allow you to represent an indefinite number of arguments as an array. Unlike the old `arguments` object, rest parameters are true arrays and work with arrow functions!
+
 ```javascript
 // Collect remaining arguments
 function sum(...numbers) {
@@ -1264,7 +1266,9 @@ Create a weather app that fetches data from an API!
     </div>
 
     <script>
-        const API_KEY = 'YOUR_API_KEY_HERE'; // Get free API key from openweathermap.org
+        // To use real weather data, sign up at https://openweathermap.org/api
+        // and replace 'YOUR_API_KEY_HERE' with your actual API key
+        const API_KEY = 'YOUR_API_KEY_HERE'; 
         const contentDiv = document.getElementById('content');
 
         async function getWeather() {
@@ -1278,8 +1282,12 @@ Create a weather app that fetches data from an API!
             try {
                 contentDiv.innerHTML = '<div class="loading">Loading weather data... ⏳</div>';
 
-                // Note: For demonstration, we'll use a mock response
-                // In production, uncomment the actual API call below
+                // Note: For demonstration, we're using mock data below
+                // To use real weather data:
+                // 1. Get a free API key from https://openweathermap.org/api
+                // 2. Replace 'YOUR_API_KEY_HERE' above with your actual key
+                // 3. Uncomment lines 1284-1294 (the API fetch code)
+                // 4. Comment out or remove lines 1296-1311 (the mock data)
                 
                 /*
                 const response = await fetch(
@@ -1293,7 +1301,7 @@ Create a weather app that fetches data from an API!
                 const data = await response.json();
                 */
 
-                // Mock data for demonstration
+                // Mock data for demonstration (remove this when using real API)
                 const data = {
                     name: city,
                     sys: { country: 'KE' },
@@ -1362,8 +1370,9 @@ Create a weather app that fetches data from an API!
 
 **Note:** To use the actual weather API, you need to:
 1. Sign up for a free API key at [OpenWeatherMap](https://openweathermap.org/api)
-2. Replace `YOUR_API_KEY_HERE` with your actual API key
-3. Uncomment the actual API fetch code
+2. Replace `YOUR_API_KEY_HERE` with your actual API key (line 1267)
+3. Uncomment the API fetch code (lines 1284-1294)
+4. Comment out or remove the mock data section (lines 1296-1311)
 
 ---
 
@@ -1885,6 +1894,6 @@ You're now equipped with advanced JavaScript skills! You can:
 
 ---
 
-*"JavaScript is the duct tape of the Internet." - Charlie Campbell*
+*"Any application that can be written in JavaScript, will eventually be written in JavaScript." - Jeff Atwood (Atwood's Law)*
 
 Keep building amazing things! 🚀
