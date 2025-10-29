@@ -303,10 +303,11 @@ const multiplyShort = (a, b) => a * b;
 // Arrow function with one parameter (no parentheses needed)
 const square = x => x * x;
 
-console.log(multiply(3, 4));       // 12
-console.log(multiplyArrow(3, 4));  // 12
-console.log(multiplyShort(3, 4));  // 12
-console.log(square(5));            // 25
+// All of these work the same way!
+console.log(multiply(3, 4));       // 12 - traditional function
+console.log(multiplyArrow(3, 4));  // 12 - arrow function
+console.log(multiplyShort(3, 4));  // 12 - short arrow function
+console.log(square(5));            // 25 - arrow with one param
 ```
 
 ### ⚖️ Conditionals - Making Decisions
