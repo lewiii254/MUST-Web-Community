@@ -292,18 +292,21 @@ function multiply(a, b) {
     return a * b;
 }
 
-// Arrow function (shorter syntax)
-const multiply = (a, b) => {
+// Arrow function (full syntax)
+const multiplyArrow = (a, b) => {
     return a * b;
 };
 
-// Even shorter (when returning a single expression)
-const multiply = (a, b) => a * b;
+// Arrow function (shorter - when returning a single expression)
+const multiplyShort = (a, b) => a * b;
 
 // Arrow function with one parameter (no parentheses needed)
 const square = x => x * x;
 
-console.log(square(5));  // 25
+console.log(multiply(3, 4));       // 12
+console.log(multiplyArrow(3, 4));  // 12
+console.log(multiplyShort(3, 4));  // 12
+console.log(square(5));            // 25
 ```
 
 ### ⚖️ Conditionals - Making Decisions
@@ -1123,7 +1126,6 @@ An exciting guessing game with feedback and score tracking!
             document.getElementById('guessInput').value = '';
             document.getElementById('feedback').innerText = 'Make your first guess! 🎮';
             document.getElementById('feedback').className = 'feedback info';
-            console.log('Secret number (for testing):', randomNumber); // Remove in production
         }
 
         function updateDisplay() {
