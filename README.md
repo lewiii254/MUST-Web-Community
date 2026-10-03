@@ -1,135 +1,84 @@
-# MUST-Web-Community
+# 🌐 MUST Web Community
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/lewiii254/MUST-Web-Community)
 ![GitHub license](https://img.shields.io/github/license/lewiii254/MUST-Web-Community)
 ![GitHub issues](https://img.shields.io/github/issues/lewiii254/MUST-Web-Community)
 
-Welcome! This repository is dedicated to helping beginners learn fullstack web development using the **MERN** stack — MongoDB, Express.js, React, and Node.js. Whether you're just starting out or want to deepen your understanding, this project offers a week-by-week guided learning journey, practical code samples, and a supportive community.
+> Learn. Build. Collaborate. Grow.
+
+This repository is the learning hub for the MUST Web Community. It is organized as a practical week-by-week path for beginners moving from foundations to full-stack development.
 
 ---
 
-## 📂 Project Structure
+## 👋 Start Here
 
-The repository is organized by weeks, with each directory (`week-1`, `week-2`, etc.) containing focused lessons, code, and notes. Here’s a quick overview:
+If you are new, begin with:
 
-- `week-1/` – MongoDB basics, data modeling, and CRUD operations
-- `week-2/` – Node.js & Express fundamentals: setting up servers, REST APIs
-- `week-3/` – React basics: components, state, props, and UI building
-- `week-4/` – Full stack integration: connecting backend and frontend
-- `assets/` – Images, diagrams, or other media for documentation or tutorials
-- `.env.example` – Example configuration for environment variables
-- `package.json` – Project dependencies and scripts
-- `README.md` – This file
-- `LICENSE` – Open-source license (MIT)
-- `CONTRIBUTING.md` – Contribution guidelines
+- **Week 1** → `/Week 1/Beginners.md`
+
+Then continue in order through Week 2, Week 3, and Week 4.
 
 ---
 
-## 🧑‍💻 Who Is This For?
+## 📚 Curriculum Overview
 
-- **Absolute beginners**: No prior experience in fullstack or JavaScript frameworks? This is for you!
-- **Self-learners**: Each week is a self-contained module so you can learn at your own pace.
-- **Students and educators**: Use this as a curriculum supplement or classroom resource.
-- **Anyone new to MERN**: Gain hands-on, practical experience.
-
----
-
-## 📚 Prerequisites
-
-Before you start, make sure you have:
-
-- A basic understanding of JavaScript (variables, functions, arrays)
-- [Node.js](https://nodejs.org/) (LTS version recommended)
-- [MongoDB Community Server](https://www.mongodb.com/try/download/community) or a [MongoDB Atlas](https://www.mongodb.com/cloud/atlas) account
-- A code editor (we recommend [VS Code](https://code.visualstudio.com/))
-- [Git](https://git-scm.com/) for version control
-
-If you’re new to any of these, check out their official docs for installation guides.
+| Week | Focus | Main Files |
+|------|-------|------------|
+| Week 1 | HTML foundations + beginner practice | `Week 1/Beginners.md`, `Week 1/MongoDB.md` |
+| Week 2 | CSS fundamentals + Node/Express intro | `Week 2/Week-2-Beginners-CSS.md`, `Week 2/NodeJS-Express.md`, `Week 2/Middlewares&routes.md` |
+| Week 3 | JavaScript + React foundations | `Week 3/Introduction-to-JavaScript.md`, `Week 3/Advanced-JavaScript.md`, `Week 3/React-Frontend.md` |
+| Week 4 | Full-stack integration | `Week 4/FullStack-Integration.md` |
+| Projects | Hands-on builds | `Projects/README.md` |
 
 ---
 
-## 🛠️ Getting Started
+## 🧰 Prerequisites
 
-1. **Clone this repository**
-    ```bash
-    git clone https://github.com/lewiii254/MUST-Web-Community.git
-    cd MUST-Web-Community
-    ```
-
-2. **Install dependencies**
-    - Most weeks have their own `package.json`. Navigate into the week’s folder and run:
-        ```bash
-        cd week-1  # or week-2, week-3, etc.
-        npm install
-        ```
-
-3. **Set up environment variables**
-    - Copy `.env.example` to `.env` and fill in any required values.
-
-4. **Run the code**
-    - Each week’s folder includes a `README.md` with instructions on running the projects or scripts.
+- [VS Code](https://code.visualstudio.com/)
+- [Node.js (LTS)](https://nodejs.org/)
+- A modern browser (Chrome, Brave, Firefox)
+- [Git](https://git-scm.com/) and GitHub account
 
 ---
 
-## 🏁 Learning Path & Progress
+## 🚀 Quick Setup
 
-The journey is divided into weekly modules:
-
-| Week | Topic                      | Status  |
-|------|----------------------------|---------|
-| 1    | MongoDB basics             | ✅ Done |
-| 2    | Node.js & Express          | 🔜 In Progress |
-| 3    | React fundamentals         | ⏳ Upcoming |
-| 4    | Full Stack Integration     | ⏳ Upcoming |
-
-Each week builds on the previous. Start with week 1, and don’t hesitate to ask questions or open issues if you get stuck!
-
----
-
-## 📁 Example Directory Layout
-
+```bash
+git clone https://github.com/lewiii254/MUST-Web-Community.git
+cd MUST-Web-Community
 ```
+
+For folders that include a `package.json`, install dependencies with:
+
+```bash
+npm install
+```
+
+---
+
+## 🗂️ Repository Structure
+
+```text
 MUST-Web-Community/
 │
-├── week-1/
-│   ├── README.md
-│   ├── mongo-examples.js
-│   └── ...
-├── week-2/
-│   ├── README.md
-│   ├── server.js
-│   └── ...
-├── week-3/
-│   └── ...
-├── assets/
-│   └── diagram.png
-├── .env.example
-├── package.json
+├── README.md
+├── Week 1/
+├── Week 2/
+├── Week 3/
+├── Week 4/
+├── Projects/
+├── DEMO/
 ├── CONTRIBUTING.md
-├── LICENSE
-└── README.md
+└── LICENSE
 ```
-
----
-
-## ❓ Frequently Asked Questions
-
-**Q: Can I use this repo on Windows, Mac, or Linux?**  
-A: Yes! The MERN stack is cross-platform. Just follow the setup steps for your OS.
-
-**Q: I’m stuck or confused. What should I do?**  
-A: Check the README in each week’s folder, open an [issue](https://github.com/lewiii254/MUST-Web-Community/issues), or join the discussions. No question is too basic!
-
-**Q: Can I contribute?**  
-A: Absolutely! See [CONTRIBUTING.md](CONTRIBUTING.md) for info.
 
 ---
 
 ## 🤝 Contributing
 
-All contributions are welcome — whether fixing typos, improving explanations, or adding new content!
+Contributions are welcome: typo fixes, clearer explanations, improved examples, and new beginner-friendly exercises.
 
-See [CONTRIBUTING.md](CONTRIBUTING.md) for step-by-step instructions.
+See [CONTRIBUTING.md](CONTRIBUTING.md).
 
 ---
 
@@ -139,4 +88,6 @@ This project is licensed under the [MIT License](LICENSE).
 
 ---
 
-Happy coding and learning!
+## ⏭️ What’s Next?
+
+Start with **Week 1**, complete the mini project, and then move to **Week 2** to style your HTML pages with CSS.

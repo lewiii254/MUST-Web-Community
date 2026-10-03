@@ -1,854 +1,454 @@
-# 🌟 Welcome to the World of HTML5! 🌟
-**Your Complete Guide to Web Development Fundamentals** 📚
+# 🌐 MUST Web Community
+## Week 1 — HTML for Beginners
 
-Welcome, future web developer! 👋 You're about to embark on an exciting journey into the world of HTML5 - the backbone of every website on the internet! This comprehensive guide will transform you from a complete beginner to someone who can confidently build beautiful, functional web pages.
+> Learn. Build. Collaborate. Grow.
 
-**Why HTML5 Matters** 🚀:
-- It's the **foundation** of all web development 🏗️
-- **Easy to learn** - perfect for beginners! 🎓
-- Used by **every single website** you've ever visited 🌍
-- **High demand** skill in the job market 💼
-- Gateway to **CSS, JavaScript, and beyond** ⚡
-
- 
-
-## 📋 What You'll Learn (Table of Contents)
-
-1. **🎯 Learning Objectives** - Your roadmap to success
-2. **🧱 HTML5 Basics** - The fundamental building blocks  
-3. **📐 Document Structure** - How to organize your code
-4. **🖍️ Essential HTML Elements** - The tools of the trade
-   - Headings and Paragraphs
-   - Lists (Ordered & Unordered)
-   - Links and Images
-5. **📋 Interactive Forms** - Collecting user input
-6. **📊 Data Tables** - Organizing information beautifully
-7. **🎯 Layout Containers** - Div, span, and organization
-8. **💎 Semantic HTML5** - Modern, meaningful markup
-9. **🎨 Complete Example Project** - Put it all together
-10. **🛠️ Hands-On Challenges** - Practice what you learn
-11. **🐛 Troubleshooting Guide** - Fix common mistakes
-12. **🔧 Essential Attributes** - Power up your HTML
-13. **🌐 Advanced HTML5 Features** - Next-level techniques
-14. **🎯 Next Steps** - Your web development journey continues
-15. **🎁 Professional Tips** - Industry best practices
-
-**⏱️ Time Investment**: 2-3 hours of focused learning  
-**📊 Difficulty Level**: Beginner-friendly with progressive complexity  
-**🛠️ Prerequisites**: Just enthusiasm and a text editor!  
+Welcome to Week 1 of the MUST Web Community curriculum. This guide is designed for absolute beginners and focuses on **learning by doing**.
 
 ---
 
+## Prerequisites
 
+No prior web development experience is required.
 
-## 🎯 Objectives
+You need:
+- [VS Code](https://code.visualstudio.com/)
+- A web browser (Chrome, Brave, or Firefox)
+- Git and GitHub (optional for Week 1)
 
-By the end of this tutorial, you’ll be able to:
+### Quick Setup Workflow
 
-- 🧩 Understand the structure and purpose of HTML5.
+Create folder  
+↓  
+Open in VS Code  
+↓  
+Create `index.html`  
+↓  
+Write HTML  
+↓  
+Open in browser  
+↓  
+Make changes  
+↓  
+Refresh browser
 
-- 🛠️ Build basic web pages using HTML5 elements.
+---
 
-- 💡 Master semantic HTML for a well-organized and accessible web structure.
+## By the end of this lesson, you should be able to:
 
- 
+- Explain what HTML is and how it works
+- Create a basic HTML page
+- Use headings, paragraphs, links, images, and lists
+- Build basic forms and tables
+- Understand HTML attributes
+- Use semantic HTML elements
+- Build a simple webpage from scratch
 
-## 🧱 Building the Foundation: HTML5 Basics
+---
 
- 
+## Learning Path
 
-HTML5 is like the LEGO bricks of the web. Each tag is a brick, helping you construct beautiful web pages! 🏗️
+1. **01 — What is HTML?**
+2. **02 — Your First HTML Page**
+3. **03 — Text & Headings**
+4. **04 — Links & Images**
+5. **05 — Lists**
+6. **06 — Containers & Semantic HTML**
+7. **07 — Forms**
+8. **08 — Tables**
+9. **09 — Attributes**
+10. **10 — Practice**
+11. **11 — Mini Project**
 
- 
+---
 
-## 📐 The Blueprint: Structure of an HTML Document
+## 01 — What is HTML?
 
-Here's what every HTML document looks like: 
+HTML (HyperText Markup Language) is the standard language used to structure content on web pages.
 
+Think of HTML as the **skeleton** of a website:
+- Headings define titles
+- Paragraphs define text blocks
+- Links connect pages
+- Images display media
+- Forms collect user input
 
+🧪 **Try it yourself:**
+- Open VS Code
+- Create a file named `index.html`
+- Add one line: `Hello MUST Web Community`
+- Open the file in your browser
 
+---
+
+## 02 — Your First HTML Page
+
+Every HTML page follows this basic structure:
+
+```html
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
-
-    <meta charset="UTF-8">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>🎨 My Cool Web Page</title>
-
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My First Website</title>
 </head>
-
 <body>
-
-    <!-- Your masterpiece goes here 🎉 -->
-
+  <h1>Welcome to MUST Web Community</h1>
+  <p>We are learning how to build websites.</p>
 </body>
-
 </html>
+```
 
+**Expected output in browser:**
+- Big heading: **Welcome to MUST Web Community**
+- Paragraph text below it
 
-## Youtube Tutorial for Environment setup and Quick Guide
-
-<a href="https://youtu.be/2u4q2vDLiU0" target="_blank">Click here to Watch</a>
- 
-
-
-### 🔍 Let's Break It Down:
-
-- `<!DOCTYPE html>`: Tells browsers you’re using HTML5 🚀.
-
-- `<html lang="en">`: Starts the HTML zone (don’t forget the `lang="en"` for accessibility!). 
-
-- `<head>`: Think of this as the control room where you load important tools like fonts, titles, and styles 🎛️.
-
-- `<body>`: 🎨 The canvas for all your web page content!
-
- 
+🧪 **Try it yourself:**
+- Change the heading to your name
+- Change the paragraph to why you joined the Web Community
 
 ---
 
- 
+## 03 — Text & Headings
+
+Use headings to organize content from most important (`h1`) to least (`h6`).
+
+```html
+<h1>Main Title</h1>
+<h2>Section Title</h2>
+<h3>Subsection Title</h3>
+<p>This is a paragraph of content.</p>
+```
+
+**Expected output in browser:**
+- Larger text for `h1`
+- Medium text for `h2` and `h3`
+- Normal paragraph text
+
+🧪 **Try it yourself:**
+- Create a page section called “About Me”
+- Add one heading and two paragraphs
+
+---
+
+## 04 — Links & Images
+
+### Links
+
+```html
+<a href="https://developer.mozilla.org/" target="_blank">Visit MDN</a>
+```
+
+### Images
+
+```html
+<img src="profile.jpg" alt="A profile photo" width="200">
+```
+
+**Expected output in browser:**
+- A clickable link to MDN
+- An image if `profile.jpg` exists in your folder
+
+🧪 **Try it yourself:**
+- Add a link to your GitHub profile
+- Add an image from your project folder
+- Change the `alt` text to describe the image clearly
+
+---
+
+## 05 — Lists
+
+Lists help present grouped information.
+
+### Unordered list
+```html
+<ul>
+  <li>HTML</li>
+  <li>CSS</li>
+  <li>JavaScript</li>
+</ul>
+```
+
+### Ordered list
+```html
+<ol>
+  <li>Open VS Code</li>
+  <li>Create index.html</li>
+  <li>Run in browser</li>
+</ol>
+```
+
+**Expected output in browser:**
+- Bulleted list for `ul`
+- Numbered list for `ol`
+
+🧪 **Try it yourself:**
+- Create a list of your hobbies
+- Create a numbered list of your study routine
+
+---
+
+## 06 — Containers & Semantic HTML
+
+### Containers
+- `<div>`: block container for grouping sections
+- `<span>`: inline container for small text parts
+
+### Semantic elements
+Semantic tags describe meaning, not just appearance:
+- `<header>`
+- `<nav>`
+- `<main>`
+- `<section>`
+- `<article>`
+- `<footer>`
+
+```html
+<header>
+  <h1>My Developer Profile</h1>
+</header>
+<main>
+  <section>
+    <h2>About Me</h2>
+    <p>Short introduction here.</p>
+  </section>
+</main>
+<footer>
+  <p>© 2026</p>
+</footer>
+```
 
-## 🖍️ Adding Components to Your Page: Common Tags
+**Expected output in browser:**
+- Content appears similar visually
+- Structure is clearer for accessibility and SEO
 
- 
+🧪 **Try it yourself:**
+- Wrap your current page content with semantic tags
+- Add `header`, `main`, and `footer`
 
-Here’s where the fun starts! 🎉 You can use these tags to create content that pops:
+---
 
- 
+## 07 — Forms
 
-### 🏷️ Headings
+Forms collect user data.
 
-Headings make your content shine like headlines in a newspaper 📰: 
+```html
+<form>
+  <label for="name">Name:</label>
+  <input type="text" id="name" name="name" required>
 
+  <label for="email">Email:</label>
+  <input type="email" id="email" name="email" required>
 
+  <label for="message">Message:</label>
+  <textarea id="message" name="message" rows="4"></textarea>
 
-<h1>🌟 Welcome to HTML5</h1>
-
-<h2>✨ Subheading 1</h2>
-
-<h3>🎯 Subheading 2</h3>
-
-
-
- 
-
-### 📝 Paragraphs
-
-Write amazing content with `<p>`: 
-
-
-
-
-
-<p>HTML is easy and fun! 🎈</p>
-
-
-
- 
-
-### 📜 Lists
-
-Organize like a pro with these list types: 
-
-- Ordered Lists (With Numbers 🔢):
-
-
-
-
-
-  <ol>
-
-      <li>HTML</li>
-
-      <li>CSS</li>
-
-  </ol>
-
-
-
-
-
-- Unordered Lists (With Bullets 🟢):
-
-
-
-  <ul>
-
-      <li>Apples 🍎</li>
-
-      <li>Bananas 🍌</li>
-
-  </ul>
-
- 
-
-### 🔗 Links
-
-Connect to the world using the `<a>` tag: 
-
-
-
-<a href="https://www.example.com" target="_blank">Click here to explore! 🌍</a>
-
-
-
-### 🖼️ Images
-
-Add life to your page with pictures: 
-
-
-
-<img src="puppy.jpg" alt="A cute puppy 🐶" width="300" height="200">
-
- 
-
-💡 **Pro Tip**: Always use the `alt` attribute for accessibility! It describes the image for screen readers and shows when the image fails to load.
-
- 
-
-## 📋 Forms: Getting User Input
-
-Forms are like questionnaires on your webpage! 📝 They let users interact with your site:
-
- 
-
-### 🎯 Basic Form Structure
-
-<form action="/submit" method="POST">
-    
-    <!-- Form elements go here -->
-    
+  <button type="submit">Send</button>
 </form>
-
- 
-
-### 🔧 Essential Form Elements
-
-**Text Input** 📝:
-```html
-<label for="username">Username:</label>
-<input type="text" id="username" name="username" placeholder="Enter your username" required>
 ```
 
-**Email Input** 📧:
-```html
-<label for="email">Email:</label>
-<input type="email" id="email" name="email" placeholder="your@email.com" required>
-```
+**Expected output in browser:**
+- Input fields for name/email
+- A message box
+- A submit button
 
-**Password Input** 🔐:
-```html
-<label for="password">Password:</label>
-<input type="password" id="password" name="password" required>
-```
+🧪 **Try it yourself:**
+- Add a dropdown for “Year of Study”
+- Add checkboxes for skills (HTML, CSS, JS)
 
-**Textarea for Long Text** 📄:
-```html
-<label for="message">Message:</label>
-<textarea id="message" name="message" rows="4" cols="50" placeholder="Write your message here..."></textarea>
-```
+---
 
-**Select Dropdown** 🎛️:
-```html
-<label for="course">Choose your course:</label>
-<select id="course" name="course">
-    <option value="">--Please choose--</option>
-    <option value="cs">Computer Science 💻</option>
-    <option value="eng">Engineering ⚙️</option>
-    <option value="art">Art 🎨</option>
-</select>
-```
+## 08 — Tables
 
-**Radio Buttons** ⚪:
-```html
-<p>Choose your year:</p>
-<input type="radio" id="year1" name="year" value="1">
-<label for="year1">Year 1</label><br>
+Tables display structured data.
 
-<input type="radio" id="year2" name="year" value="2">
-<label for="year2">Year 2</label><br>
-```
-
-**Checkboxes** ☑️:
-```html
-<p>Select your interests:</p>
-<input type="checkbox" id="coding" name="interests" value="coding">
-<label for="coding">Coding 💻</label><br>
-
-<input type="checkbox" id="design" name="interests" value="design">
-<label for="design">Design 🎨</label><br>
-```
-
-**Submit Button** ✅:
-```html
-<button type="submit">Submit Form 🚀</button>
-```
-
- 
-
-## 📊 Tables: Organizing Data
-
-Tables are perfect for displaying structured data like schedules or scores! 📈
-
- 
-
-**Basic Table Structure**:
 ```html
 <table border="1">
-    <thead>
-        <tr>
-            <th>Student Name 👨‍🎓</th>
-            <th>Course 📚</th>
-            <th>Grade ⭐</th>
-        </tr>
-    </thead>
-    <tbody>
-        <tr>
-            <td>Alice Johnson</td>
-            <td>Computer Science</td>
-            <td>A+</td>
-        </tr>
-        <tr>
-            <td>Bob Smith</td>
-            <td>Engineering</td>
-            <td>B+</td>
-        </tr>
-    </tbody>
+  <thead>
+    <tr>
+      <th>Skill</th>
+      <th>Level</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>HTML</td>
+      <td>Beginner</td>
+    </tr>
+    <tr>
+      <td>CSS</td>
+      <td>Learning</td>
+    </tr>
+  </tbody>
 </table>
 ```
 
- 
+**Expected output in browser:**
+- A 2-column table with borders and headings
 
-## 🎯 Layout Containers: div and span
+🧪 **Try it yourself:**
+- Create a table for your weekly study timetable
 
-**Div** - Block-level container for grouping elements:
-```html
-<div class="card" style="border: 1px solid #ccc; padding: 20px; margin: 10px;">
-    <h3>Welcome Card 🎉</h3>
-    <p>This is a card container!</p>
-</div>
-```
+---
 
-**Span** - Inline container for styling parts of text:
-```html
-<p>This is <span style="color: blue; font-weight: bold;">important text</span> in a paragraph.</p>
-```
+## 09 — Attributes
 
- 
- 💎 Semantic HTML: The Fancy Tags
+Attributes add extra meaning or behavior to HTML elements.
 
- 
-
-Let’s add meaning to our code! ✨ Semantic tags tell browsers what the content is about, making the web more accessible 🌐.
-
- 
-
- ✨ Meet the Semantic Crew
-
-- `<header>`: The superstar 🎤 introducing your page.
-
-
-
-  <header>
-
-      <h1>🌟 My Awesome Website</h1>
-
-  </header>
-
-
-
- 
-
-- `<footer>`: The polite sign-off 🛑.
-
-
-
-  <footer>
-
-      <p>👋 Thanks for visiting! © 2024</p>
-
-  </footer>
-
-
-
- 
-
-- `<nav>`: The tour guide 🚶‍♂️ showing you around. 
-
-
-
-<nav>
-
-      <a href="about">About Us 💡</a>
-
-      <a href="services">Services 🔧</a>
-
-  </nav>
-
-
-
- 
-
-- `<section>`: Groups related content like a playlist 🎵. 
-
-
-
-  <section id="about">
-
-      <h2>👋 About Us</h2>
-
-      <p>We make learning HTML5 fun! 🎉</p>
-
-  </section>
-
- 
-
-- `<article>`: Self-contained stories like blog posts 📰. 
-
-
-
-  <article>
-
-      <h3>🖋️ Latest Blog Post</h3>
-
-      <p>Today we learned about semantic HTML! 🎈</p>
-
-  </article>
-
-
-
-### 🎨 Let's Build Something Fun!
-
- 
-
-Combine what you’ve learned to create a web page 🎉: 
-
-
-
-<!DOCTYPE html>
-
-<html lang="en">
-
-<head>
-
-    <meta charset="UTF-8">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>🌟 My First HTML Page</title>
-
-</head>
-
-<body>
-
-    <header>
-
-        <h1>🌍 Welcome to My Site</h1>
-
-        <nav>
-
-            <a href="about">About Us</a> |
-
-            <a href="services">Services</a>
-
-        </nav>
-
-    </header>
-
- 
-
-    <section id="about">
-
-        <h2>👋 About Us</h2>
-
-        <p>We’re here to teach you HTML5 the fun way! 🎉</p>
-
-    </section>
-
- 
-
-    <section id="services">
-
-        <h2>🛠️ Our Services</h2>
-
-        <ul>
-
-            <li>Web Development 🌐</li>
-
-            <li>SEO Optimization 📈</li>
-
-        </ul>
-
-    </section>
-
- 
-
-    <footer>
-
-        <p>© 2024 HTML Wizards. 🧙‍♂️</p>
-
-    </footer>
-
-</body>
-
-</html>
-
- 
-
- 
-
-
-## 🛠️ Hands-On Practice: Build Your First Complete Page!
-
-Let's create a student profile page that combines everything we've learned! 🚀
-
-**Challenge: Create "My Student Profile" page** 🎯:
-
-```html
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>👨‍🎓 My Student Profile</title>
-</head>
-<body>
-    <header>
-        <h1>🌟 Welcome to My Profile</h1>
-        <nav>
-            <a href="#about">About Me 👋</a> |
-            <a href="#courses">My Courses 📚</a> |
-            <a href="#contact">Contact 📞</a>
-        </nav>
-    </header>
-
-    <main>
-        <section id="about">
-            <h2>👋 About Me</h2>
-            <img src="my-photo.jpg" alt="My profile picture" width="200" height="200">
-            <p>Hello! I'm a student at <span style="font-weight: bold; color: blue;">MUST University</span>. 
-               I love learning new technologies! 💻</p>
-            
-            <div style="background-color: #f0f8ff; padding: 15px; border-radius: 10px; margin: 20px 0;">
-                <h3>🎯 Quick Facts</h3>
-                <ul>
-                    <li><strong>Course:</strong> Computer Science 💻</li>
-                    <li><strong>Year:</strong> 2nd Year</li>
-                    <li><strong>Hobbies:</strong> Coding, Gaming, Music 🎵</li>
-                </ul>
-            </div>
-        </section>
-
-        <section id="courses">
-            <h2>📚 My Courses This Semester</h2>
-            <table border="1" style="border-collapse: collapse; width: 100%;">
-                <thead style="background-color: #4CAF50; color: white;">
-                    <tr>
-                        <th>Course Code</th>
-                        <th>Course Name</th>
-                        <th>Credits</th>
-                        <th>Grade</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>CS201</td>
-                        <td>Data Structures</td>
-                        <td>3</td>
-                        <td>A 🌟</td>
-                    </tr>
-                    <tr>
-                        <td>CS202</td>
-                        <td>Web Development</td>
-                        <td>4</td>
-                        <td>A+ ⭐</td>
-                    </tr>
-                    <tr>
-                        <td>CS203</td>
-                        <td>Database Systems</td>
-                        <td>3</td>
-                        <td>B+ 📈</td>
-                    </tr>
-                </tbody>
-            </table>
-        </section>
-
-        <section id="contact">
-            <h2>📞 Contact Me</h2>
-            <form style="max-width: 500px; margin: 20px 0;">
-                <div style="margin: 15px 0;">
-                    <label for="name">Your Name:</label><br>
-                    <input type="text" id="name" name="name" style="width: 100%; padding: 8px; margin-top: 5px;" required>
-                </div>
-                
-                <div style="margin: 15px 0;">
-                    <label for="email">Your Email:</label><br>
-                    <input type="email" id="email" name="email" style="width: 100%; padding: 8px; margin-top: 5px;" required>
-                </div>
-                
-                <div style="margin: 15px 0;">
-                    <label for="reason">Reason for contact:</label><br>
-                    <select id="reason" name="reason" style="width: 100%; padding: 8px; margin-top: 5px;">
-                        <option value="">--Please choose--</option>
-                        <option value="study">Study Group 📚</option>
-                        <option value="project">Project Collaboration 🤝</option>
-                        <option value="help">Need Help 💡</option>
-                        <option value="other">Other</option>
-                    </select>
-                </div>
-                
-                <div style="margin: 15px 0;">
-                    <label for="message">Message:</label><br>
-                    <textarea id="message" name="message" rows="4" style="width: 100%; padding: 8px; margin-top: 5px;" placeholder="Write your message here..."></textarea>
-                </div>
-                
-                <button type="submit" style="background-color: #4CAF50; color: white; padding: 10px 20px; border: none; cursor: pointer; border-radius: 5px;">
-                    Send Message 🚀
-                </button>
-            </form>
-        </section>
-    </main>
-
-    <footer style="margin-top: 50px; text-align: center; padding: 20px; background-color: #f1f1f1;">
-        <p>🎓 Made with ❤️ by [Your Name] | © 2024</p>
-        <p>
-            <a href="mailto:your.email@must.ac.ke">📧 Email Me</a> |
-            <a href="https://github.com/yourusername" target="_blank">💻 GitHub</a> |
-            <a href="https://linkedin.com/in/yourprofile" target="_blank">💼 LinkedIn</a>
-        </p>
-    </footer>
-</body>
-</html>
-```
-
- 
-
- 🎮 Interactive Challenges
-
-**Challenge 1: Create Your Own Webpage** 🏆
-1. Copy the basic HTML structure above
-2. Replace the placeholder content with your own information
-3. Add your own courses and grades
-4. Change the colors and styling to match your personality
-
-**Challenge 2: Add More Features** ⚡
-Try adding these elements to practice:
-- A photo gallery using multiple `<img>` tags
-- A list of your favorite programming languages
-- A skills section with progress bars (use CSS later!)
-- Links to your social media profiles
-
-**Challenge 3: Accessibility Challenge** ♿
-Make your page accessible:
-- Add `alt` attributes to all images
-- Use proper heading hierarchy (h1, h2, h3...)
-- Associate labels with form inputs using `for` and `id`
-- Test your page with keyboard navigation only
-
- 
-
-## 🐛 Common Mistakes & How to Fix Them
-
-**1. Forgetting to close tags** ❌
-```html
-<!-- Wrong -->
-<p>This paragraph is not closed
-
-<!-- Right -->
-<p>This paragraph is properly closed!</p>
-```
-
-**2. Missing alt attributes on images** ❌
-```html
-<!-- Wrong -->
-<img src="photo.jpg">
-
-<!-- Right -->
-<img src="photo.jpg" alt="Description of the image">
-```
-
-**3. Not using labels with form inputs** ❌
-```html
-<!-- Wrong -->
-<input type="text" placeholder="Name">
-
-<!-- Right -->
-<label for="name">Name:</label>
-<input type="text" id="name" name="name" placeholder="Name">
-```
-
-**4. Incorrect nesting** ❌
-```html
-<!-- Wrong -->
-<p><h2>This heading shouldn't be inside a paragraph</h2></p>
-
-<!-- Right -->
-<h2>This heading is properly positioned</h2>
-<p>This paragraph comes after the heading.</p>
-```
-
- 
-
-## 🔧 Essential HTML Attributes Every Beginner Should Know
-
-**Global Attributes** (work on most elements):
-- `id="unique-name"` - Unique identifier for the element 🏷️
-- `class="style-class"` - CSS class name for styling 🎨
-- `style="color: red;"` - Inline CSS styling 🖌️
-- `title="Tooltip text"` - Tooltip that appears on hover 💡
-
-**Link Attributes**:
-- `href="URL"` - Where the link goes 🔗
-- `target="_blank"` - Opens link in new tab 🆕
-- `download` - Makes link download a file 📥
-
-**Image Attributes**:
-- `src="image.jpg"` - Image source URL 📷
-- `alt="Description"` - Alternative text for accessibility ♿
-- `width="300"` and `height="200"` - Image dimensions 📐
-
-**Form Attributes**:
-- `required` - Makes field mandatory ⚠️
-- `placeholder="Example text"` - Hint text in input fields 💭
-- `readonly` - Makes field read-only 🔒
-- `disabled` - Disables the input element ❌
-
- 
-
-## 🌐 HTML5 Semantic Elements: Building Meaningful Websites
-
-HTML5 introduced semantic elements that give meaning to your content:
-
-**Article vs Section** 🤔:
-- `<article>` - Standalone content (blog post, news article)
-- `<section>` - Thematic grouping of content
-
-**Other Semantic Elements**:
-- `<aside>` - Sidebar content 📄
-- `<figure>` and `<figcaption>` - Images with captions 🖼️
-- `<time>` - Dates and times ⏰
-- `<mark>` - Highlighted text ✨
+Common attributes:
+- `href` on links
+- `src` and `alt` on images
+- `id`, `class`, `title` on many elements
+- `required`, `placeholder`, `type` on form fields
 
 Example:
+
 ```html
-<article>
-    <header>
-        <h1>Learning HTML5 🚀</h1>
-        <time datetime="2024-01-15">January 15, 2024</time>
-    </header>
-    
-    <section>
-        <h2>Introduction</h2>
-        <p>HTML5 is <mark>amazing</mark> for beginners!</p>
-        
-        <figure>
-            <img src="html5-logo.jpg" alt="HTML5 Logo">
-            <figcaption>The HTML5 logo represents modern web development</figcaption>
-        </figure>
-    </section>
-    
-    <aside>
-        <h3>Related Topics</h3>
-        <ul>
-            <li>CSS Basics</li>
-            <li>JavaScript Fundamentals</li>
-        </ul>
-    </aside>
-</article>
+<a href="https://github.com" title="Open GitHub">GitHub</a>
+<img src="logo.png" alt="Community logo">
+<input type="text" placeholder="Enter your username" required>
 ```
 
- 
-
-## 🎯 What's Next? Your Web Development Journey
-
-**Immediate Next Steps** 🚀:
-1. **Practice, Practice, Practice!** - Build 3-5 small websites using only HTML
-2. **Learn CSS** - Style your HTML to make it beautiful 🎨
-3. **Understand Responsive Design** - Make your sites work on mobile 📱
-4. **Basic JavaScript** - Add interactivity to your pages ⚡
-
-**Recommended Learning Resources** 📚:
-- MDN Web Docs (developer.mozilla.org) - The ultimate reference 📖
-- W3Schools - Great for beginners with interactive examples 🎮
-- freeCodeCamp - Structured learning path 🛤️
-- Codecademy - Interactive coding practice 💻
-
-**Project Ideas to Practice** 💡:
-1. Personal Portfolio Website 👨‍💻
-2. Recipe Collection Site 🍳
-3. Local Business Landing Page 🏪
-4. Blog Template 📝
-5. Event Information Page 🎉
-
- 
-## 🎁 Bonus Tips
-
-1. 🕶️ Use semantic tags to make your pages accessible to everyone.
-
-2. 🚦 Test your page in multiple browsers to ensure compatibility.
-
-3. 💻 Keep practicing – the more you code, the better you get! 🏋️‍♀️
-4. 📱 **Think Mobile** - Always consider how your page looks on phones
-5. 🔍 **Validate Your Code** - Use W3C HTML Validator to catch errors
-6. 📖 **Read Documentation** - MDN is your best friend for accurate information
-7. 🎨 **Plan Before You Code** - Sketch your layout first
-8. 💡 **Use Comments** - `<!-- Comment here -->` helps you and others understand your code
-
-**Performance Tips** ⚡:
-- Optimize images (use appropriate sizes and formats)
-- Use external CSS and JavaScript files instead of inline styles
-- Minimize HTTP requests by combining files when possible
-- Use semantic HTML for better SEO rankings
-
-**Security Reminders** 🔐:
-- Always validate user input in forms
-- Never put sensitive information in HTML comments
-- Use HTTPS for any pages with forms
-- Keep your knowledge updated with web security best practices
-
- 
-
-## 🎉 Congratulations!
-
-You’ve taken your first step toward mastering web development! 🚀
+🧪 **Try it yourself:**
+- Add `title` to your links
+- Add `placeholder` to all text inputs
 
 ---
 
-**🎉 What an Amazing Journey!** 
+## 10 — Practice
 
-You've successfully completed your comprehensive HTML5 tutorial! 🚀 You now have the foundational knowledge to:
-
-✅ **Build Complete Web Pages** - Structure content like a pro  
-✅ **Use Semantic HTML** - Create accessible, meaningful markup  
-✅ **Handle Forms & Tables** - Collect user input and display data  
-✅ **Apply Best Practices** - Write clean, maintainable code  
-✅ **Debug Common Issues** - Fix problems like a developer  
-
-**Your HTML Toolkit** 🧰:
-- Document structure (`<!DOCTYPE html>`, `<html>`, `<head>`, `<body>`)
-- Content elements (headings, paragraphs, lists, links, images)
-- Form controls (inputs, selects, textareas, buttons)
-- Tables for data display
-- Semantic elements for better structure
-- Essential attributes for functionality and accessibility
-
-**What You Can Build Now** 🏗️:
-- Personal portfolio websites 👨‍💻
-- Business landing pages 🏪
-- Contact forms and surveys 📋
-- Data tables and lists 📊
-- Blog templates 📝
-- Educational content pages 📚
-
-Ready to make your pages beautiful with CSS? 🎨  
-Then add interactivity with JavaScript? ⚡  
-
-**Keep coding, keep learning, and remember - every expert was once a beginner!** 💪
+Build a one-page “About Me” site with:
+- One `h1` and at least two `h2` sections
+- Paragraphs about yourself
+- One image with `alt`
+- At least one link
+- One ordered or unordered list
+- One table
+- One simple contact form
+- Semantic layout (`header`, `main`, `section`, `footer`)
 
 ---
-*Happy coding! 👨‍💻👩‍💻*
-Ready to move on to CSS and JavaScript? Stay tuned for more! 🎨
+
+## 11 — Mini Project
+
+### 🚀 Mini Project: My Developer Profile
+
+Build a complete page that includes:
+- Your name
+- Profile image
+- Short introduction
+- Skills
+- Hobbies
+- Education
+- Social/GitHub links
+- Contact form
+- A small table
+- Semantic HTML structure
+
+Suggested page flow:
+
+My Developer Profile  
+↓  
+About Me  
+↓  
+Skills  
+↓  
+Education  
+↓  
+Projects  
+↓  
+Contact
+
+### Submission checklist
+- [ ] Page opens correctly in browser
+- [ ] No missing closing tags
+- [ ] All images include `alt`
+- [ ] Headings are in correct order (`h1` → `h2` → `h3`)
+- [ ] Form labels are connected to inputs (`for` + `id`)
+
+---
+
+## Common Mistakes (and Fixes)
+
+### 1) Missing link destination
+
+❌ Wrong:
+```html
+<a>Google</a>
+```
+
+✅ Correct:
+```html
+<a href="https://google.com">Google</a>
+```
+
+Why: `href` tells the browser where to go.
+
+### 2) Missing closing tag
+
+❌ Wrong:
+```html
+<p>This is my paragraph
+```
+
+✅ Correct:
+```html
+<p>This is my paragraph</p>
+```
+
+### 3) Incorrect nesting
+
+❌ Wrong:
+```html
+<p><h2>About</h2></p>
+```
+
+✅ Correct:
+```html
+<h2>About</h2>
+<p>About section text.</p>
+```
+
+### 4) Missing image alt text
+
+❌ Wrong:
+```html
+<img src="photo.jpg">
+```
+
+✅ Correct:
+```html
+<img src="photo.jpg" alt="Portrait of student">
+```
+
+### 5) Form label not connected
+
+❌ Wrong:
+```html
+<label>Name</label>
+<input type="text">
+```
+
+✅ Correct:
+```html
+<label for="name">Name</label>
+<input type="text" id="name" name="name">
+```
+
+---
+
+## 📚 Further Learning
+
+- [MDN HTML documentation](https://developer.mozilla.org/en-US/docs/Web/HTML)
+- [W3Schools HTML reference](https://www.w3schools.com/html/)
+- [W3C HTML Validator](https://validator.w3.org/)
+- [VS Code documentation](https://code.visualstudio.com/docs)
+
+---
+
+## 🚀 What’s Next?
+
+In Week 2, we’ll take the pages you built with HTML and style them using CSS.
+
+**Keep building. Keep learning. Keep shipping. ⚡**
